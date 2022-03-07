@@ -1,13 +1,16 @@
 import re
 from urllib import request
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
 from .models import Albums
 
-def list(request):
-    all_albums = Albums.objects.all()
-    return render(request, 'albums/albums_list.html', {'albums': all_albums})
+class AlbumsListView(ListView):
+    model = Albums
+    context_object_name = 'albums'
+    template_name = 'albums/albums_list.html'
 
-def detail(request, pk):
-    album = Albums.objects.get(pk=pk)
-    return render(request, 'albums/albums_detail.html', {'album': album})
+class AlbumsDetailView(DetailView):
+    model = Albums
+    context_object_name = 'album'
+    # template_name = 'albums/albums_detail.html'
