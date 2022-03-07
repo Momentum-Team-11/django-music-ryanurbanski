@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for album in albums %}
+            <div class="container mb-2">
+                <li>{{album.title}}</li>
+            </div>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
