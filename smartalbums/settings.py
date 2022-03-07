@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # extra
+    # 'django_simple_bulma',
+
     # apps
-    'home', 
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +122,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Added by me to try and use bulma -------------------------
+# STATICFILES_FINDERS = [
+#     # First add the two default Finders, since this will overwrite the default.
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+#     # Now add our custom SimpleBulma one.
+#     'django_simple_bulma.finders.SimpleBulmaFinder',
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
