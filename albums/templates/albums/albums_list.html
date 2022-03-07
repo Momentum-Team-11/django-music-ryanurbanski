@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>These are the Albums:</h1>
-    <h2>Click each for more details</h2>
     <ul>
         {% for album in albums %}
-            <li>{{album.title}}</li>
+            <div class="container mb-2">
+                <li>{{album.title}}</li>
+            </div>
         {% endfor %}
     </ul>
 {% endblock %}
