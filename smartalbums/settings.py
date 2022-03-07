@@ -38,11 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # extra
-    # 'django_simple_bulma',
-
     # apps
     'home',
+    'albums',
+    
 ]
 
 MIDDLEWARE = [
