@@ -1,5 +1,6 @@
-<html>
+{% extends 'base.html' %}
 
+{% block content %}
     <h1>These are the Albums:</h1>
     <h2>Click each for more details</h2>
     <ul>
@@ -7,5 +8,5 @@
             <li>{{album.title}}</li>
         {% endfor %}
     </ul>
+{% endblock %}
 
-</html>
